@@ -1,0 +1,19 @@
+{
+  "count" : 3,
+  "next": "helloooo",
+  "previous": null,
+  "results" : [
+    {
+      "name" : "Manchester United",
+      "url" : "Reds"
+    },
+    {
+      "name" : "Manchester City",
+      "url" : "Citizens"
+    },
+    {
+      "name" : "Arsenal",
+      "url" : "Gunners"
+    }
+  ]
+}
