@@ -27,6 +27,7 @@ https://github.com/BrandonRammohan/Android3A
 ### Premier Ecran
 
 Liste des équipes de la première ligue anglaise avec l'emblème, le nom de l'équipe, et sa position dans le classement :
+
 [
 ![image](https://user-images.githubusercontent.com/62753668/83982707-045a4700-a929-11ea-9cb3-0fc9be378887.png)
 ](url)
@@ -34,6 +35,7 @@ Liste des équipes de la première ligue anglaise avec l'emblème, le nom de l'�
 ### Deuxieme Ecran 
 
 Statistiques concernant l'équipe cliquée et boutons Team A et Team B pour sélectionner cette équipe pour la simulation du match:
+
 [
 ![image](https://user-images.githubusercontent.com/62753668/83982735-4a170f80-a929-11ea-9117-b673e1e7703a.png)
 ](url)
