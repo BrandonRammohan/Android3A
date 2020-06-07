@@ -1,16 +1,25 @@
 package com.example.myapplication;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
-    private List<Pokemon> values;
+    private List<Team> values;
+    public Context context;
+    public RelativeLayout mainlayout;
+    private MainActivity ma;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -19,17 +28,24 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         // each data item is just a string in this case
         public TextView txtHeader;
         public TextView txtFooter;
+        public ImageView iconTeam;
         public View layout;
 
         public ViewHolder(View v) {
             super(v);
             layout = v;
+            iconTeam = (ImageView) v.findViewById(R.id.icon);
             txtHeader = (TextView) v.findViewById(R.id.firstLine);
             txtFooter = (TextView) v.findViewById(R.id.secondLine);
+            mainlayout = v.findViewById(R.id.main_layout);
+
+
+
         }
+
     }
 
-    public void add(int position, Pokemon item) {
+    public void add(int position, Team item) {
         values.add(position, item);
         notifyItemInserted(position);
     }
@@ -40,8 +56,9 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ListAdapter(List<Pokemon> myDataset) {
+    public ListAdapter(List<Team> myDataset, Context ct) {
         values = myDataset;
+        context = ct;
     }
 
     // Create new views (invoked by the layout manager)
@@ -63,9 +80,22 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, final int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        final Pokemon currentPokemon = values.get(position);
-        holder.txtHeader.setText(currentPokemon.getName());
-        holder.txtFooter.setText(currentPokemon.getUrl());
+        final Team currentTeam = values.get(position);
+        holder.txtHeader.setText(currentTeam.getName());
+        holder.txtFooter.setText(String.valueOf(currentTeam.getPosition()));
+        Glide.with(holder.itemView.getContext()).load(currentTeam.getIcon()).into(holder.iconTeam);
+
+        holder.txtHeader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //openNewActivity();
+                Intent intent = new Intent(context, InfoTeams.class);
+                intent.putExtra("name", currentTeam.getName());
+                intent.putExtra("position", currentTeam.getPosition());
+
+                context.startActivity(intent);
+            }
+        });
     }
 
     // Return the size of your dataset (invoked by the layout manager)
