@@ -52,6 +52,7 @@ Bouton TEAM B :
 Bouton LANCER :
   - Lance la simulation du match (affichage du score final)
 
-
-
+[
+![image](https://user-images.githubusercontent.com/62753668/83982836-ffe25e00-a929-11ea-80b7-9fd807377e36.png)
+](url)
 
