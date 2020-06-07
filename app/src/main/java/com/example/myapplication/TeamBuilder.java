@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,9 +14,14 @@ public class TeamBuilder extends AppCompatActivity {
     private ImageView iconTeamSelectedA;
     private ImageView iconTeamSelectedB;
 
+    private TextView teamA;
+    private TextView teamB;
+
 
     private String teamSelectedA;
     private String teamSelectedB;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +30,8 @@ public class TeamBuilder extends AppCompatActivity {
         setContentView(R.layout.activity_team_builder);
 
         switchActivity = (Button) findViewById(R.id.goToActivity1);
+        teamA = (TextView) findViewById(R.id.teamA);
+        teamB = (TextView) findViewById(R.id.teamB);
 
         switchActivity.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +41,9 @@ public class TeamBuilder extends AppCompatActivity {
                 finish();
             }
         });
+
+        teamA.setText(teamSelectedA);
+        teamB.setText(teamSelectedB);
 
 
 
