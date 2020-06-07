@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,9 +16,7 @@ import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     private List<Team> values;
-    public Context context;
-    public RelativeLayout mainlayout;
-    private MainActivity ma;
+    private Context context;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -37,9 +34,6 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             iconTeam = (ImageView) v.findViewById(R.id.icon);
             txtHeader = (TextView) v.findViewById(R.id.firstLine);
             txtFooter = (TextView) v.findViewById(R.id.secondLine);
-            mainlayout = v.findViewById(R.id.main_layout);
-
-
 
         }
 
@@ -92,6 +86,11 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
                 Intent intent = new Intent(context, InfoTeams.class);
                 intent.putExtra("name", currentTeam.getName());
                 intent.putExtra("position", currentTeam.getPosition());
+                intent.putExtra("points", currentTeam.getPoints());
+                intent.putExtra("won", currentTeam.getWon());
+                intent.putExtra("draw", currentTeam.getDrawn());
+                intent.putExtra("lost", currentTeam.getLost());
+                //intent.putExtra("icon", currentTeam.getIcon());
 
                 context.startActivity(intent);
             }
