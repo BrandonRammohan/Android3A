@@ -1,11 +1,8 @@
 package com.example.myapplication;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,36 +31,27 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences sharedPreferences;
     private Gson gson;
 
-    public Button switchToOther;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        switchToOther = (Button) findViewById(R.id.goToSecond);
 
         sharedPreferences = getSharedPreferences("application_esiea", Context.MODE_PRIVATE);
         gson = new GsonBuilder()
                 .setLenient()
                 .create();
 
-        //List<Team> listTeams = getDataFromCache();
+        List<Team> listTeams = getDataFromCache();
 
-//        if(listTeams != null){
-//            showList(listTeams);
-//        } else {
+        if(listTeams != null){
+            showList(listTeams);
+        } else {
             makeAPIcall();
-//        }
+        }
 
-        switchToOther.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent otherActivity = new Intent(getApplicationContext(),TeamBuilder.class);
-                startActivity(otherActivity);
-                finish();
-            }
-        });
+
 
     }
 
@@ -100,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void makeAPIcall() {
-
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create(gson))
@@ -137,7 +124,6 @@ public class MainActivity extends AppCompatActivity {
                 .putString(Constants.KEY_TEAMS_LIST, jsonString)
                 .apply();
 
-        Toast.makeText(getApplicationContext(), "List Saved", Toast.LENGTH_SHORT).show();
 
     }
 
