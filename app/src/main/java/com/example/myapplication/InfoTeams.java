@@ -56,13 +56,20 @@ public class InfoTeams extends AppCompatActivity {
         teamA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                teamBuilder.setTeamSelectedA(dName);
+
+                //teamBuilder.setTeamSelectedA(dName);
+                Intent intentA = new Intent(InfoTeams.this, TeamBuilder.class);
+                intentA.putExtra("teamA", dName);
+                InfoTeams.this.startActivity(intentA);
             }
         });
         teamB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                teamBuilder.setTeamSelectedB(dName);
+                //teamBuilder.setTeamSelectedB(dName);
+                Intent intentB = new Intent(InfoTeams.this, TeamBuilder.class);
+                intentB.putExtra("teamB", dName);
+                InfoTeams.this.startActivity(intentB);
             }
         });
 

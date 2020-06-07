@@ -10,5 +10,12 @@ public interface FootAPI {
 
     @GET("/api/v2/ability")
     Call<RestTeamsResponse> getAbility();
+
+    //public String teamA = null;
+    //public String teamB = null;
+
+
+    
 }
+
 
