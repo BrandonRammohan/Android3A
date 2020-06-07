@@ -1,10 +1,10 @@
 # TeamBuilder
 
-intro 
 
 ## Présentation du Projet
 
-pres projet 
+Adepte de foot, j'ai concu une application listant toutes les équipes de foot de la ligue anglaise et des statistiques selon l'équipe séléctionnée.
+J'ai ajouté une autre fonctionnalité qui permet de séléctionner deux équipes et simuler le score d'un match. L'utilisateur pourra faire un pronostique avant de lancer la simulation.
 
 ### Prérequis
 
@@ -12,7 +12,7 @@ pres projet
 * Récupérer une API Rest
 
 ```
-https API
+https://github.com/BrandonRammohan/Android3A
 ```
 
 ### Consignes respectées
@@ -21,22 +21,31 @@ https API
 * Ecran avec le détail d'un élément
 * Appel Webservice à une API Rest
 * Stockage de données en cache
-* Gitflow
+* Gitflow (création de branche selon les fonctionnalités ajoutées)
 
-## Fonctionnalités
 
 ### Premier Ecran
 
-description
-[
-![image](https://user-images.githubusercontent.com/62753668/83981900-5fd50680-a922-11ea-9c4d-12d714ed24f0.png)
-](url)
+Liste des équipes de la première ligue anglaise avec l'emblème, le nom de l'équipe, et sa position dans le classement :
+
 
 ### Deuxieme Ecran 
 
-description
-<img width="320" alt="Capture d’écran 2020-06-07 à 22 46 11" src="https://user-images.githubusercontent.com/62753715/83980031-b4708580-a912-11ea-8f3d-f80371c6243c.png">
+Statistiques concernant l'équipe cliquée :
 
 
-* PS : blabla
+### Troisième Ecran 
+Nom des deux équipes séléctionnée
+
+Bouton TEAM A :
+  - Sélectionne la première équipe comme équipe gagnante
+Bouton EGALITE :
+  - Sélectionne une égalité entre les deux équipes
+Bouton TEAM B : 
+  - Sélectionne la deuxième équipe comme équipe gagnante
+Bouton LANCER :
+  - Lance la simulation du match (affichage du score final)
+
+
+
 
