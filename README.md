@@ -42,14 +42,10 @@ Statistiques concernant l'équipe cliquée et boutons Team A et Team B pour sél
 ### Troisième Ecran 
 Nom des deux équipes séléctionnées :
 
-Bouton TEAM A :
-  - Sélectionne la première équipe comme équipe gagnante
-Bouton EGALITE :
-  - Sélectionne une égalité entre les deux équipes
-Bouton TEAM B : 
-  - Sélectionne la deuxième équipe comme équipe gagnante
-Bouton LANCER :
-  - Lance la simulation du match (affichage du score final)
+Bouton TEAM A : Sélectionne la première équipe comme équipe gagnante
+Bouton EGALITE : Sélectionne une égalité entre les deux équipes
+Bouton TEAM B : Sélectionne la deuxième équipe comme équipe gagnante
+Bouton LANCER : Lance la simulation du match (affichage du score final)
 
 [
 ![image](https://user-images.githubusercontent.com/62753668/83982836-ffe25e00-a929-11ea-80b7-9fd807377e36.png)
