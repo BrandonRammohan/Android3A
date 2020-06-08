@@ -40,7 +40,7 @@ Statistiques concernant l'équipe cliquée et boutons Team A et Team B pour sél
 ](url)
 
 ### Troisième Ecran 
-Nom des deux équipes séléctionnée
+Nom des deux équipes séléctionnées :
 
 Bouton TEAM A :
   - Sélectionne la première équipe comme équipe gagnante
