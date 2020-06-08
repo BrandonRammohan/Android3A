@@ -3,16 +3,15 @@
 
 ## Présentation du Projet
 
-Adepte de foot, j'ai concu une application listant toutes les équipes de foot de la ligue anglaise et des statistiques selon l'équipe séléctionnée.
-J'ai ajouté une autre fonctionnalité qui permet de séléctionner deux équipes et simuler le score d'un match. L'utilisateur pourra faire un pronostique avant de lancer la simulation.
+Adepte de foot, j'ai conçu une application listant toutes les équipes de foot de la ligue anglaise et des statistiques selon l'équipe sélectionnée.
+J'ai ajouté une autre fonctionnalité qui permet de sélectionner deux équipes et simuler le score d'un match. L'utilisateur pourra faire un pronostique avant de lancer la simulation.
 
 ### Prérequis
 
 * Installation d'Android Studio
 * Récupérer une API Rest
-
 ```
-https://github.com/BrandonRammohan/Android3A
+https://raw.githubusercontent.com/BrandonRammohan/Android3A/master/app/src/main/java/com/example/myapplication/teams.json
 ```
 
 ### Consignes respectées
