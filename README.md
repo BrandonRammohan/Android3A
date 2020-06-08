@@ -43,8 +43,11 @@ Statistiques concernant l'équipe cliquée et boutons Team A et Team B pour sél
 Nom des deux équipes séléctionnées :
 
 Bouton TEAM A : Sélectionne la première équipe comme équipe gagnante
+
 Bouton EGALITE : Sélectionne une égalité entre les deux équipes
+
 Bouton TEAM B : Sélectionne la deuxième équipe comme équipe gagnante
+
 Bouton LANCER : Lance la simulation du match (affichage du score final)
 
 [
